@@ -1,0 +1,97 @@
+[root@localhost ~]# ifconfig 
+ens110f0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 90:5a:08:0a:c1:fe  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ens110f1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.31.57.184  netmask 255.255.0.0  broadcast 172.31.255.255
+        inet6 fe80::925a:8ff:fe0a:c1ff  prefixlen 64  scopeid 0x20<link>
+        ether 90:5a:08:0a:c1:ff  txqueuelen 1000  (Ethernet)
+        RX packets 67101  bytes 4310677 (4.1 MiB)
+        RX errors 0  dropped 1718  overruns 0  frame 0
+        TX packets 1911  bytes 1435535 (1.3 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 294  bytes 26556 (25.9 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 294  bytes 26556 (25.9 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+mylo: flags=195<UP,BROADCAST,RUNNING,NOARP>  mtu 1500
+        inet6 fe80::90b4:8dff:febc:1c6a  prefixlen 64  scopeid 0x20<link>
+        ether 92:b4:8d:bc:1c:6a  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6  bytes 420 (420.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[root@localhost ~]# echo 4 > /sys/class/net/ens110f0/device/sriov_numvfs 
+[root@localhost ~]# ifconfig 
+ens110f0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 90:5a:08:0a:c1:fe  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ens110f1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.31.57.184  netmask 255.255.0.0  broadcast 172.31.255.255
+        inet6 fe80::925a:8ff:fe0a:c1ff  prefixlen 64  scopeid 0x20<link>
+        ether 90:5a:08:0a:c1:ff  txqueuelen 1000  (Ethernet)
+        RX packets 68653  bytes 4413359 (4.2 MiB)
+        RX errors 0  dropped 1762  overruns 0  frame 0
+        TX packets 2012  bytes 1447681 (1.3 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ens110f0v0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 6a:eb:ce:1d:1d:c3  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ens110f0v1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether ce:a2:b3:39:28:24  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ens110f0v2: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 22:d2:e0:51:84:09  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ens110f0v3: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 7a:1d:a2:32:6d:39  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 302  bytes 27404 (26.7 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 302  bytes 27404 (26.7 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+mylo: flags=195<UP,BROADCAST,RUNNING,NOARP>  mtu 1500
+        inet6 fe80::90b4:8dff:febc:1c6a  prefixlen 64  scopeid 0x20<link>
+        ether 92:b4:8d:bc:1c:6a  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6  bytes 420 (420.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
